@@ -6,6 +6,7 @@ import EditStudent from "./EditStudent";
 import ListGroup from "../studyGroup/ListGroup"; 
 import DeleteStudent from "./DeleteStudent";
 import Paginate from "../main/Paginate";
+import './student.css';
 
 const Student = () => {
   
@@ -121,69 +122,71 @@ const Student = () => {
 
   return (
     <>
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-4">
-            <div className="d-flex flex-column " style={{marginTop:'43px'}}>
-              <input
-                type="text"
-                placeholder="Search students..."
-                value={searchStudent}
-                onChange={handleSearchChange}
-               
-                className="orange-border"
-              />
-            </div>
-          </div>
-          {successMessage && (
-    <div className="alert alert-success" role="alert">
-        {successMessage}
-    </div>
-)}
-          <div className=" row col-4">
-          <div className=" col d-flex justify-content-between">
-            <h6 className="mt-5">
-            <i className="bi bi-person"></i> <b>{totalStudents} students</b>
-            </h6>
-            </div>
-            <div className=" col">
-            <button
-              type="button"
-              className="btn btn-primary btn-sm mt-5"
-              style={{ width: "150px", height: "30px" }}
-              onClick={handleCreateStudent}
-            >
-              New
-            </button>
-            </div>
-          </div>
-
-          <div className="col-4 text-end mt-5">
-            <Paginate
-              totalPages={totalPages}
-              currentPage={currentPage}
-              handlePageChange={handlePageChange}
-            />
-          </div>
-
-          <div className="col mt-5">
-            <div className="row">
-              <div className="col-3">
-                <ListGroup selectedGroups={selectedGroups} onGroupChange={handleGroupChange}  /> 
-              </div>
-              <div className="col-9">
-                <ListStudent
-                  students={students}
-                  onEdit={handleEditStudent}
-                  onDelete={handleDeleteStudent}
-                  onEditSuccess={handleEditSuccess}
-                  selectedGroups={selectedGroups}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+     <div className="container mt-5">
+  <div className="row row-container"> {/* Add hozzá a "row-container" osztályt */}
+    <div className="col-4">
+      <div className="d-flex flex-column" style={{ marginTop: '43px' }}>
+        <input
+          type="text"
+          placeholder="Search students..."
+          value={searchStudent}
+          onChange={handleSearchChange}
+          className="orange-border"
+        />
       </div>
+    </div>
+    {successMessage && (
+      <div className="alert alert-success" role="alert">
+        {successMessage}
+      </div>
+    )}
+    <div className="row col-4">
+      <div className="col d-flex justify-content-between">
+        <h6 className="mt-5">
+          <i className="bi bi-person"></i> <b>{totalStudents} students</b>
+        </h6>
+      </div>
+      <div className="col">
+        <button
+          type="button"
+          className="btn btn-primary btn-sm mt-5"
+          style={{ width: '150px', height: '30px' }}
+          onClick={handleCreateStudent}
+        >
+          New
+        </button>
+      </div>
+    </div>
+
+    <div className="col-4 text-end mt-5">
+      <Paginate
+        totalPages={totalPages}
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
+    </div>
+  </div>
+
+  <div className="col mt-5">
+    <div className="row">
+      <div className="col-3">
+        <ListGroup
+          selectedGroups={selectedGroups}
+          onGroupChange={handleGroupChange}
+        />
+      </div>
+      <div className="col-9">
+        <ListStudent
+          students={students}
+          onEdit={handleEditStudent}
+          onDelete={handleDeleteStudent}
+          onEditSuccess={handleEditSuccess}
+          selectedGroups={selectedGroups}
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
       {creatingNewStudent && (
         <CreateStudent

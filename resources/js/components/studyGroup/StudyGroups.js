@@ -4,6 +4,7 @@ import ListFullGroup from './ListFullGroup';
 import CreateGroups from './CreateGroups';
 import EditGroups from './EditGroups';
 import DeleteGroups from './DeleteGroups';
+import './studyGroups.css';
 
 const StudyGroups = () => {
   const [groups, setGroups] = useState([]);
@@ -67,7 +68,7 @@ const StudyGroups = () => {
   }, []);
 
   return (
-    <div>
+    <div className="text-center">
       <h2>Study Groups</h2>
       <div className="col-4">
         <h5 className="mt-5">

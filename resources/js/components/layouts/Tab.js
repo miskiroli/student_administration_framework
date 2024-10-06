@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './tab.css';
 
 const Tab = ({ totalStudents, totalGroups, totalStudentsInGroups }) => {
     return (
@@ -8,7 +9,6 @@ const Tab = ({ totalStudents, totalGroups, totalStudentsInGroups }) => {
                 <Link
                     to="/students"
                     className="nav-link"
-                    style={{ paddingRight: "200px" }}
                 >
                     <h3>STUDENTS</h3>
                     <br />
@@ -17,7 +17,7 @@ const Tab = ({ totalStudents, totalGroups, totalStudentsInGroups }) => {
                 <Link
                     to="/studygroups"
                     className="nav-link"
-                    style={{ paddingRight: "200px" }}
+                   
                 >
                     <h3>STUDY Groups</h3>
                     <br />

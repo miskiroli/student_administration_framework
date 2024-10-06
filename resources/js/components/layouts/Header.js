@@ -1,5 +1,5 @@
 import React from "react";
-
+import './header.css';
 const Header = () => {
     return (
         <div className="container">
@@ -12,16 +12,7 @@ const Header = () => {
                         alt="Saf logo"
                     />
                 </div>
-                <div className="col-md-auto d-flex align-items-center">
-                    <img
-                        src="/storage/images/Profile.png"
-                        width={75}
-                        height={75}
-                        alt="Profile Picture"
-                        style={{ borderRadius: "50%" }}
-                    />
-                    <h6 className="ml-2 mb-0">Adam</h6>
-                </div>
+              
             </div>
         </div>
     );

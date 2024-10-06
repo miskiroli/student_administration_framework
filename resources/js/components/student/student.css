@@ -1,0 +1,62 @@
+
+@media (max-width: 768px) {
+
+  .col-3 {
+      display: none;
+  }
+
+  .col-9 {
+      width: 100%;  
+  }
+
+  
+  table {
+      width: 100%; 
+      display: block;
+      overflow-x: auto; 
+      white-space: nowrap;
+  }
+
+  thead th:nth-child(2), 
+  tbody td:nth-child(2),
+  thead th:nth-child(4), 
+  tbody td:nth-child(4) {
+      display: none;
+  }
+
+  .btn-group {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .btn-group .btn {
+      margin-bottom: 5px;
+      width: 100%; 
+  }
+
+  .row-container {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.row-container > div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.row-container input {
+    width: 100%; 
+}
+
+.row-container .total-students-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.pagination {
+    justify-content: center; 
+}
+}

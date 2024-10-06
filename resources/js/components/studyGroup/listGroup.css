@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+    .filters-container ,.filters-title{
+      display: none;
+    }
+  }

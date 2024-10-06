@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    table {
+      width: 100%;
+      display: block;
+      overflow-x: auto; 
+      white-space: nowrap;
+    }
+    .list-student-table {
+      width: 100%; 
+    }
+  
+    thead th:nth-child(2), 
+    tbody td:nth-child(2),
+    thead th:nth-child(4), 
+    tbody td:nth-child(4) {
+      display: none;
+    }
+  
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .btn-group .btn {
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  
+    td img {
+      width: 25px; 
+      height: 25px;
+    }
+  
+    .tooltip {
+      font-size: 12px; 
+    }
+  }
+  

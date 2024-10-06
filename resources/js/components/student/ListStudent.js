@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import './listStudent.css';
 
 const ListStudent = ({ students, onEdit, onDelete, selectedGroups }) => {
     const [moreGroupsData, setMoreGroupsData] = useState([]);
@@ -21,7 +22,7 @@ const ListStudent = ({ students, onEdit, onDelete, selectedGroups }) => {
 
     return (
         <>
-            <table className="table">
+            <table className="table list-student-table">
                 <thead>
                     <tr>
                         <th><input type="checkbox" name="" id="" /></th>

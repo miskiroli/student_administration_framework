@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './listGroup.css'; // Importáld az új CSS fájlt
 
 const ListGroup = ({ selectedGroups, onGroupChange }) => {
     const [listStudyGroups, setListStudyGroups] = useState([]);
@@ -21,7 +22,6 @@ const ListGroup = ({ selectedGroups, onGroupChange }) => {
 
         return () => {
             setIsMounted(false);
-           
         };
     }, [isMounted]);
 
@@ -34,25 +34,27 @@ const ListGroup = ({ selectedGroups, onGroupChange }) => {
 
     return (
         <>
-            <h6 className="mt-3">FILTERS OF STUDY GROUPS</h6>
-            {listStudyGroups.map((group) => (
-                <div className="form-check" key={group.id}>
-                    <input
-                        className="form-check-input"
-                        type="checkbox"
-                        value={group.id}
-                        id={`groupCheckbox${group.id}`}
-                        onChange={() => handleChange(group.id)}
-                        checked={selectedGroups.includes(group.id)}
-                    />
-                    <label
-                        className="form-check-label"
-                        htmlFor={`groupCheckbox${group.id}`}
-                    >
-                        {group.name}
-                    </label>
-                </div>
-            ))}
+            <h3 className="filters-title">FILTERS OF STUDY GROUPS</h3>
+            <div className="filters-container">
+                {listStudyGroups.map((group) => (
+                    <div className="form-check" key={group.id}>
+                        <input
+                            className="form-check-input"
+                            type="checkbox"
+                            value={group.id}
+                            id={`groupCheckbox${group.id}`}
+                            onChange={() => handleChange(group.id)}
+                            checked={selectedGroups.includes(group.id)}
+                        />
+                        <label
+                            className="form-check-label"
+                            htmlFor={`groupCheckbox${group.id}`}
+                        >
+                            {group.name}
+                        </label>
+                    </div>
+                ))}
+            </div>
         </>
     );
 };

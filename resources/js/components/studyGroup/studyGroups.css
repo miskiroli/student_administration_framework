@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    h2 {
+      text-align: center; 
+    }
+  
+    .col-4 {
+      text-align: center; 
+    }
+  
+    .btn {
+      width: 100%; 
+    }
+  }
+  

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './listFullGroup.css';
 const ListFullGroup = ({ groups, onEdit, onDelete }) => {
   return (
     <table className="table">
