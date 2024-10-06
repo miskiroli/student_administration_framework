@@ -13,7 +13,7 @@ The project is a web application designed for student management. It allows user
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Run npm install to install dependencies.
-4. Set up your database configuration in .env file.
+4. Set up your database configuration in .env example file.
 5. Run database migrations with php artisan migrate.
 6. Start the development server with php artisan serve.
 7. Access the application in your browser at localhost:8000.
